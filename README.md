@@ -3,26 +3,37 @@ This Solidity program is a simple "Error handling " program that demonstrates th
 
 ## Description
 
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a three functions first one demonstrates the use of require keyword, the second one demonstrates the use of the revert keyword and third one demonstrates the use of assert . This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
-
-## Getting Started
+This Solidity contract serves as a basic example for those getting started with smart contract development on the Ethereum blockchain. It demonstrates the usage of three important keywords: require, revert, and assert. These keywords play a crucial role in ensuring the integrity and validity of smart contracts.
 
 ### Executing program
+Open remix IdE and once you are on the  website, create a new file by clicking on the "file" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FunctioError.sol). Copy and paste the following code into the file:
+## JavaScript
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+contract errorDec {
+    function Assert(uint a) public pure{
+    assert(a!= 0);
+    
+}
+function Require(uint b) public pure{
 
-To run this program, you can use gitpod , an online Solidity IDE. To get started, go to https://jeffryanpol-soliditysta-sbt87u3aw59.ws-us98.gitpod.io/
+        require( b>5, "Input must be greater than 5");
+        }
+    
 
-Once you are on the  website, create a new file by clicking on the "file" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., FunctioError.sol). Copy and paste the following code into the file:
-JavaScript
+function Revert(uint a,uint b) public pure returns(uint) {
+    if( a<b){
+        revert("a should be greater");
+    }
+    return a-b;
+
+}
+
+}
 
 
 ```
 
-To compile the code, press CRTL+ SHIFT+P  then select Solidity compile contract and the program is compile sucessfully will be shown in console 
+To compile the code, press button available in remix IDE.
 ## Authors
-
-Geet Kiran Kaur 
-
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Manish Kumar
